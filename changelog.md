@@ -1,22 +1,10 @@
-# v2.0.0 #
-- [DEPENDENCIES] upgrade mysql to alpha7. You *MUST* use this version or newer for DATETIMEs to work
-
 # v1.6.0 #
 - [DEPENDENCIES] upgraded most dependencies. most important: mysql was upgraded to 2.0.0-alpha-3
-- [DEPENDENCIES] mysql is now an optional dependency. #355 (thanks to clkao)
 - [REFACTORING] separated tests for dialects
-- [REFACTORING] reduced number of sql queries used for adding an element to a N:M association. #449 (thanks to innofluence/janmeier)
-- [REFACTORING] dropped support for synchronous migrations. added third parameter which needs to get called once the migration has been finished. also this adds support for asynchronous actions in migrations.
-- [OTHERS] code was formatted to fit the latest code style guidelines (thanks to durango)
-- [OTHERS] Explicitly target ./docs folder for generate-docs script. #444 (thanks to carsondarling)
 - [BUG] fixed wrong version in sequelize binary
 - [BUG] local options have higher priority than global options (thanks to guersam)
 - [BUG] fixed where clause when passing an empty array (thanks to kbackowski)
-- [BUG] fixed updateAttributes for models/tables without primary key (thanks to durango)
-- [BUG] fixed the location of the foreign key when using belongsTo (thanks to ricardograca)
-- [BUG] don't return timestamps if only specific attributes have been seleceted (thanks to ricardograca)
-- [BUG] fixed removeColumn for sqlite
-- [FEATURE] added association prefetching /eager loading for find and findAll. #465
+- [FEATURE] added association prefetching for find and findAll
 - [FEATURE] it's now possible to use callbacks of async functions inside migrations (thanks to mphilpot)
 - [FEATURE] improved comfort of sequelize.query. just pass an sql string to it and wait for the result
 - [FEATURE] Migrations now understand NODE_ENV (thanks to gavri)
@@ -29,16 +17,6 @@
 - [FEATURE] added possibility to define the attributes of received associations (thanks to joshm)
 - [FEATURE] added findOrCreate, which returns a the already existing instance or creates one (thanks to eveiga)
 - [FEATURE] minConnections option for MySQL pooling (thanks to dominiklessel)
-- [FEATURE] added BIGINT data type which is treated like a string (thanks to adamsch1)
-- [FEATURE] https://github.com/sdepold/sequelize/pull/345
-- [FEATURE] allow definition of a models table name (thanks to slamkajs)
-- [FEATURE] allow usage of enums. #440 (thanks to KevinMartin)
-- [FEATURE] allows updateAttributes to target specific fields only (thanks to Pasvaz)
-- [FEATURE] timestamps are now stored as UTC. #461 (thanks to innofluence/janmeier)
-- [FEATURE] results of raw queries are parsed with dottie. #468 (thanks to kozze89)
-- [FEATURE] support for array serialization. pg only. #443 (thanks to clkao)
-- [FEATURE] add increment and decrement methods on dao. #408 (thanks to janmeier/innofluence)
-- [FEATURE] unified the result of describeTable
 
 # v1.5.0 #
 - [REFACTORING] use underscore functions for Utils.isHash (thanks to Mick-Hansen/innofluence)

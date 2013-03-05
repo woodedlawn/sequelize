@@ -112,16 +112,4 @@ describe('Utils', function() {
     	expect(Utils.isHash(values)).toBeTruthy();
     });
   });
-
-  describe('format', function() {
-    it('should format where clause correctly when the value is truthy', function() {
-      var where = ['foo = ?', 1];
-      expect(Utils.format(where)).toEqual('foo = 1');
-    });
-
-    it('should format where clause correctly when the value is falsy', function() {
-      var where = ['foo = ?', 0];
-      expect(Utils.format(where)).toEqual('foo = 0');
-    });
-  });
 })
